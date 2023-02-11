@@ -1,0 +1,69 @@
+[
+    {
+        "myData": [
+            {
+            "id": 1,
+            "firstName": "Mohammad",
+            "lastName": "Amaren",
+            "city": "Eberswalde",
+            "status": "active",
+            "image": "myImage",
+            "description": "A web developer who has a passion for technology, data reading and design I am enthusiastic and motivated to solve problems and ready for new challenges that I enjoy more",
+            "hobbys": ["Chess", "football"]
+            }
+        ],
+        "routes": [
+            {
+            "id": 1,
+            "portfolio": "https://portfolio-navy-two-14.vercel.app/welcome"
+            }
+        ],
+        "projects": [
+            {
+            "id": 1,
+            "name": "Languages translator",
+            "image": "translator",
+            "tags": ["react", "sass", "typeScript"],
+            "source_code": "https://github.com/MohammadAmarena/Language-Translator-using-React-Hooks",
+            "demo": "https://mohammadamarena.github.io/Language-Translator-using-React-Hooks/",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+            },
+            {
+            "id": 2,
+            "name": "Shop",
+            "image": "shop",
+            "tags": ["html", "scss", "javaScript"],
+            "source_code": "https://github.com/MohammadAmarena/shopping-cart",
+            "demo": "https://mohammadamarena.github.io/shopping-cart/",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+            },
+            {
+            "id": 3,
+            "name": "Image Slider",
+            "image": "slider",
+            "tags": ["react", "scss", "javaScript"],
+            "source_code": "https://github.com/MohammadAmarena/imageSlider",
+            "demo": "https://image-slid.netlify.app/",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+            },
+            {
+            "id": 4,
+            "name": "Filterable-table",
+            "image": "filterableTable",
+            "tags": ["react", "scss", "javaScript"],
+            "source_code": "https://github.com/MohammadAmarena/filterableTable",
+            "demo": "...",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+            },
+            {
+            "id": 5,
+            "name": "Drum Kit",
+            "image": "drum",
+            "tags": ["html", "scss", "javascript"],
+            "source_code": "https://github.com/MohammadAmarena/drum-kit",
+            "demo": "...",
+            "description": "Some quick example text to build on the card title and make up the bulk of the card's content."
+            }
+        ]
+    }
+]
