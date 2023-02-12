@@ -1,0 +1,29 @@
+@url = http://localhost:3017
+
+### Api Docs
+GET {{url}}
+
+### Get Data
+GET {{url}}/data
+
+### Pad login
+POST {{url}}/login
+content-type: application/json
+
+{
+    "password": "badPassword"
+}
+
+### Good login
+POST {{url}}/login
+content-type: application/json
+
+{
+    "password": "123"
+}
+
+### Get current user
+{{url}}/get-current-user
+
+### Logout
+{{url}}/logout
