@@ -4,7 +4,7 @@ import cors from 'cors'
 import session from 'express-session'
 import * as config from '../config.js'
 
-const router = express.Router()
+const router = express()
 router.use(express.json())
 
 router.use(cors({
@@ -32,10 +32,18 @@ router.get('/data', model.getMainData);
 
 router.get('/routes', model.getRoutes);
 
+router.get('/routes/:id', model.getRoute);
+
 router.post('/login', model.login);
 
 router.get('/get-current-user', model.getCurrentUser);
 
 router.get('/logout', model.logout);
+
+router.delete('/routes/:id', model.authorizeUser, model.deleteRoute);
+
+router.post('/routes', model.authorizeUser, model.addRoute)
+
+router.put('/routes/:id', model.authorizeUser, model.updateRoute)
 
 export default router

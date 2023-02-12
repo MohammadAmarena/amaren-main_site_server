@@ -1,26 +1,21 @@
 [
     {
-    "id": 1,
     "name": "portfolio",
     "source" : "https://portfolio-navy-two-14.vercel.app/welcome"
     },
     {
-    "id": 2,
     "name": "github",
     "source": "https://github.com/MohammadAmarena"
     },
     {
-    "id": 3,
     "name": "netlify",
     "source": "https://app.netlify.com/teams/mohammadamarena/overview"
     },
     {
-    "id": 4,
     "name": "linkedin",
     "source": "https://www.linkedin.com/in/mohammad-amaren-195a86231"
     },
     {
-    "id": 5,
     "name": "xing",
     "source": "https://www.xing.com/profile/Mohammad_Amaren/cv"
     }

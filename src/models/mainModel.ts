@@ -10,7 +10,8 @@ const mainSchema = new mongoose.Schema({
 export const Informations = mongoose.model('Informations', mainSchema)
 
 const routesSchema = new mongoose.Schema({
-    routes: [ Object ]
+    name: String,
+    source: String,
 })
 
 export const Routes = mongoose.model('Routes', routesSchema)

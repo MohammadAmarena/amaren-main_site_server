@@ -34,11 +34,57 @@ export const getRoutes = async (req: express.Request, res: express.Response) => 
         const routes = await Routes.find()
         if (routes.length > 0) {
             res.send(routes)
+            console.log(routes);
+            
         }
     } catch (err: any) {
         res.send(err.message).status(400)
     }
 }
+
+export const getRoute = async (req: express.Request, res: express.Response) => {
+    const id = req.params.id;
+    const route = await Routes.findOne({ _id: id });
+    console.log(route);
+    
+    route ? res.json(route) : res.send('Route not found');
+};
+
+export const deleteRoute = async (req: express.Request, res: express.Response ) => {
+    const id = req.params.id;
+    const route = await Routes.deleteOne({ _id: id });
+    route
+    ? res.json(`Route with id ${id} has been deleted`)
+    : res.send('Route not found');
+};
+
+export const addRoute = async (req: express.Request, res: express.Response) => {
+    const rowRoute: any = req.body;
+    const route = new Promise(async (resolve, reject) => {
+    const docRoute = new Routes(rowRoute);
+    const addedDocRoute = await docRoute.save();
+    resolve(addedDocRoute.toObject({ versionKey: false }));
+    });
+    res.send(await route);
+};
+
+export const updateRoute = async (
+    req: express.Request,
+    res: express.Response
+) => {
+    const _id = req.params.id;
+    const route = req.body;
+    const oldRoute = await Routes.find({ _id });
+
+    await Routes.updateOne({ _id }, { $set: { ...route } });
+
+    const newRoute = await Routes.find({ _id });
+
+    res.status(200).send({
+    oldRoute: oldRoute,
+    result: newRoute,
+    });
+};
 
 export const login = (req: express.Request, res: express.Response) => {
     const { password } = req.body;

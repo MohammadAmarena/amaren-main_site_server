@@ -6,6 +6,33 @@ GET {{url}}
 ### Get Data
 GET {{url}}/data
 
+### Get Routes
+{{url}}/routes
+
+### Get Route
+{{url}}/routes/63e84155b6b5d0a37c3d4f6c
+
+### Delete Route
+DELETE {{url}}/routes/63e85fb14f287cc02cba1ee5
+
+### Add Route
+POST {{url}}/routes
+content-type: application/json
+
+{
+    "name": "portfoliodddddddddddddddddd",
+    "source" : "https://portfolio-navy-two-14.vercel.app/welcome"
+}
+
+### EDIT Route
+PUT {{url}}/routes/63e85fb14f287cc02cba1ee5
+content-type: application/json
+
+{
+"name": "projectvvvvvvvv",
+"source": "https://www.xing.com/profile/Mohammad_Amaren/cv"
+}
+
 ### Pad login
 POST {{url}}/login
 content-type: application/json
@@ -19,7 +46,7 @@ POST {{url}}/login
 content-type: application/json
 
 {
-    "password": "123"
+    "password": "###"
 }
 
 ### Get current user
