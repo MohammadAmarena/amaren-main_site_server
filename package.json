@@ -5,12 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "npm run build && nodemon",
-    "start": "node dist/server.js",
-    "push": "npm run build && git add . && git commit -m \"predeploy\" && git push",
-    "deploy": "git pull --no-rebase && npm i && pm2 restart main-backend",
-    "build": "tsc"
-},
+		"dev": "npm run build && nodemon",
+		"build": "tsc --build",
+		"start": "node dist/server.js",
+		"setup": "npm i && pm2 start --name main-backend npm -- start",
+		"deploy": "git pull --no-rebase && pm2 restart main-backend --update-env --time && pm2 save"
+	},
   "nodemonConfig": {
     "watch": [
       "src"
