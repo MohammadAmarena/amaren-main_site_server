@@ -26,7 +26,6 @@ export const getRoutes = async (req, res) => {
         const routes = await Routes.find();
         if (routes.length > 0) {
             res.send(routes);
-            console.log(routes);
         }
     }
     catch (err) {

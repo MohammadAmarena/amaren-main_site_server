@@ -34,8 +34,6 @@ export const getRoutes = async (req: express.Request, res: express.Response) => 
         const routes = await Routes.find()
         if (routes.length > 0) {
             res.send(routes)
-            console.log(routes);
-            
         }
     } catch (err: any) {
         res.send(err.message).status(400)

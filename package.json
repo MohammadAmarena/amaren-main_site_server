@@ -1,5 +1,5 @@
 {
-  "name": "main-page-client",
+  "name": "main-page-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,9 +8,9 @@
     "dev": "npm run build && nodemon",
     "start": "node dist/server.js",
     "push": "npm run build && git add . && git commit -m \"predeploy\" && git push",
-    "deploy": "git pull --no-rebase && npm i && pm2 restart getajob007-backend",
+    "deploy": "git pull --no-rebase && npm i && pm2 restart amaren-main-backend",
     "build": "tsc"
-  },
+},
   "nodemonConfig": {
     "watch": [
       "src"
