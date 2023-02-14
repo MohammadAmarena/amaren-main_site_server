@@ -8,7 +8,7 @@
     "dev": "npm run build && nodemon",
     "start": "node dist/server.js",
     "push": "npm run build && git add . && git commit -m \"predeploy\" && git push",
-    "deploy": "git pull --no-rebase && npm i && pm2 restart amaren-main-backend",
+    "deploy": "git pull --no-rebase && npm i && pm2 restart main-backend",
     "build": "tsc"
 },
   "nodemonConfig": {
